@@ -60,3 +60,20 @@ button:hover {
 #referralLinkContainer {
     margin-top: 20px;
 }
+
+/* Add your previous styles here */
+
+#loading {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.hidden {
+    display: none;
+}
