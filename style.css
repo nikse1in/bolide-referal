@@ -9,6 +9,17 @@ body {
     align-items: center;
 }
 
+.campaign-highlight {
+    background-color: #ffdd57; /* Bright color for attention */
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger text size */
+    font-weight: bold; /* Make the text bold */
+}
+
 .container, .email-signup {
     background-color: #ffffff;
     padding: 20px;
@@ -69,7 +80,7 @@ a:hover {
         display: block;
     }
 
-    .container, .email-signup {
+    .container, .email-signup, .campaign-highlight {
         max-width: 100%;
         margin-bottom: 15px;
     }
