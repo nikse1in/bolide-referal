@@ -1,42 +1,40 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eaeaea; /* Lighter background */
+    background-color: #eaeaea;
     color: #333;
     text-align: center;
     padding: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-.container {
-    background-color: #ffffff; /* Light background for container */
+.container, .email-signup {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     max-width: 500px;
-    margin: 0 auto;
+    margin: 10px;
 }
 
 input, button {
     margin: 10px 0;
     padding: 10px;
-    border: 2px solid #ddd; /* Enhanced border */
+    border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
     width: calc(100% - 22px);
 }
 
 button {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-button#grow {
-    transform: scale(1.1);
+    background-color: #45a049;
 }
 
 .hidden {
@@ -49,15 +47,15 @@ button#grow {
     color: #fff;
 }
 
-#codeValid, #codeInvalid {
-    font-size: 24px;
-    margin-left: 10px;
+#referralLinkContainer {
+    margin-top: 10px;
 }
 
-#codeValid {
-    color: green;
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-#codeInvalid {
-    color: red;
+a:hover {
+    text-decoration: underline;
 }
