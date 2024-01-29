@@ -1,26 +1,7 @@
-const validAccessCodes = ["A812", "B923", "C034"];
 const emojis = [
     '🍏', '💻', '📱', '🎧', '⌚️', '🌟', '✨', '🔥', '💥', '🚀',
     // ... other emojis ...
 ];
-
-document.getElementById('accessCode').addEventListener('input', function(e) {
-    const codeValue = e.target.value;
-    const isCodeValid = validAccessCodes.includes(codeValue);
-    toggleAccessCodeFeedback(isCodeValid);
-});
-
-function toggleAccessCodeFeedback(isValid) {
-    const codeValid = document.getElementById('codeValid');
-    const codeInvalid = document.getElementById('codeInvalid');
-    const getCodeButton = document.getElementById('getCodeButton');
-    const generateButton = document.getElementById('generateButton');
-
-    codeValid.classList.toggle('hidden', !isValid);
-    codeInvalid.classList.toggle('hidden', isValid);
-    getCodeButton.classList.toggle('hidden', isValid);
-    generateButton.disabled = !isValid;
-}
 
 document.getElementById('twitterHandle').addEventListener('input', function(e) {
     const handle = e.target.value.trim();
@@ -32,9 +13,8 @@ document.getElementById('twitterHandle').addEventListener('input', function(e) {
 function generateReferralLink() {
     var twitterHandle = document.getElementById('twitterHandle').value.trim();
     var loadingDiv = document.getElementById('loading');
-    var codeValid = document.getElementById('codeValid');
 
-    if (!codeValid.classList.contains('hidden') && twitterHandle !== '') {
+    if (twitterHandle !== '') {
         if (twitterHandle.startsWith('@')) {
             twitterHandle = twitterHandle.substring(1);
         }
@@ -47,7 +27,7 @@ function generateReferralLink() {
             loadingDiv.classList.add('hidden');
         }, 1500);
     } else {
-        alert('Please make sure the access code is correct and your Twitter handle is entered.');
+        alert('Please enter your Twitter handle.');
     }
 }
 
