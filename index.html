@@ -9,19 +9,20 @@
 <body>
     <div class="container">
         <h1>Welcome to Bolide Referral Program</h1>
-        <p>Enter the access code and your Twitter handle to generate your unique referral code</p>
-        <input type="text" id="accessCode" placeholder="Access Code">
-        <span id="codeValid" class="hidden">&#10004;</span>
-        <span id="codeInvalid" class="hidden">&#10060;</span>
-        <button id="getCodeButton" onclick="window.location.href='https://bolide.deform.cc/Referraprogram';">Get Access Code</button>
+        <p>Enter your Twitter handle to generate your unique referral code</p>
         <input type="text" id="twitterHandle" placeholder="@YourTwitterHandle">
-        <button id="generateButton" onclick="generateReferralLink()" disabled>Generate</button>
+        <button id="generateButton" onclick="generateReferralLink()">Generate</button>
         <div id="loading" class="hidden">Generating...</div>
         <div id="referralLinkContainer" class="hidden">
             <input type="text" id="referralLink" readonly>
             <button onclick="copyReferralLink()">Copy Code</button>
         </div>
         <p id="emojiFeedback"></p>
+        <p><a href="https://dapper-gooseberry-348.notion.site/Bolide-Referral-Program-Instructions-d34db5a6968a41e287e47d8895fdf006?pvs=4" target="_blank">Instructions for the Referral Program</a></p>
+    </div>
+    <div class="email-signup">
+        <p>Sign up for email updates</p>
+        <button onclick="window.location.href='https://bolide.deform.cc/Referraprogram';">Sign Up</button>
     </div>
 
     <script src="script.js"></script>
